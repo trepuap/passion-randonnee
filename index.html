@@ -66,21 +66,44 @@
         ⭐⭐⭐⭐
         <p>"Très belle randonnée familiale." - Claire</p>
     </div>
-<h3>Laisser un avis</h3>
+<h3>✍️ Laisser un avis</h3>
 
 <form action="https://formsubmit.co/paupert.marc@orange.fr" method="POST">
 
+    <input type="hidden" name="_subject"
+           value="Nouvel avis sur Passion Randonnée">
+
     <input type="text"
            name="Nom"
-           placeholder="Votre prénom"
+           placeholder="Votre prénom ou pseudo"
            required>
 
+    <input type="email"
+           name="Email"
+           placeholder="Votre e-mail"
+           required>
+
+    <select name="Note" required>
+        <option value="">Choisissez une note</option>
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ Excellent</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ Très bien</option>
+        <option value="⭐⭐⭐">⭐⭐⭐ Bien</option>
+        <option value="⭐⭐">⭐⭐ Moyen</option>
+        <option value="⭐">⭐ À améliorer</option>
+    </select>
+
+    <input type="text"
+           name="Randonnee"
+           placeholder="Nom de la randonnée">
+
     <textarea name="Avis"
-              placeholder="Votre commentaire"
-              rows="4"
+              placeholder="Partagez votre expérience..."
+              rows="5"
               required></textarea>
 
     <button type="submit">Publier mon avis</button>
+
+</form>
 
 </form>
 </section>

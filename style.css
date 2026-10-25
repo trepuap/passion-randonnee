@@ -144,3 +144,31 @@ footer{
     text-align:center;
     padding:20px;
 }
+#commentaires form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#commentaires input,
+#commentaires select,
+#commentaires textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#commentaires button {
+    background: #2e6b3f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#commentaires button:hover {
+    background: #245531;
+}
