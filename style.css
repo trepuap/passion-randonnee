@@ -30,10 +30,16 @@ nav a{
 }
 
 .hero{
-    background:url("images/foret.jpg") center/cover;
-    color:white;
-    text-align:center;
-    padding:120px 20px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/foret.jpg") center/cover;
+
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
 }
 
 .hero h2{
