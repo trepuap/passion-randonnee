@@ -1,3 +1,3 @@
 function message() {
-    alert("Bienvenue sur mon site web !");
+    alert("Bienvenue sur Passion Randonnée ! 🚶‍♂️ Le site est encore en construction.");
 }
