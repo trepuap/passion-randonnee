@@ -93,6 +93,20 @@ nav a{
 #meteo h2 {
     color: #2e6b3f;
 }
+.meteo-carte {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f4f8f4;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.meteo-carte p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
 footer{
     background:#1b5e20;
     color:white;
