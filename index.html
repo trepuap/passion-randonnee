@@ -73,6 +73,8 @@
     <img src="https://visitor-badge.laobi.icu/badge?page_id=trepuap.passion-randonnee"
          alt="Compteur de visites">
 </section>
+ : <span id="condition">Chargement...</span></p>
+    </div>
 <section id="meteo">
     <h2>🌤️ Météo Montagne</h2>
     <p>Conditions actuelles à La Mure</p>
@@ -114,6 +116,10 @@ fetch("https://api.open-meteo.com/v1/forecast?latitude=44.94&longitude=5.72&curr
     document.getElementById("condition").textContent = "Indisponible";
 });
 </script>
+
+
+
+
 <section id="contact">
     <h2>📩 Contact</h2>
 
