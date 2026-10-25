@@ -69,12 +69,12 @@
 </section>
 
 <section style="text-align:center; margin:30px 0;">
+  <section style="text-align:center; margin:30px 0;">
     <h3>Nombre de visiteurs</h3>
     <img src="https://visitor-badge.laobi.icu/badge?page_id=trepuap.passion-randonnee"
          alt="Compteur de visites">
 </section>
- : <span id="condition">Chargement...</span></p>
-    </div>
+
 <section id="meteo">
     <h2>🌤️ Météo Montagne</h2>
     <p>Conditions actuelles à La Mure</p>
@@ -85,40 +85,6 @@
         <p>☁️ Conditions : <span id="condition">Chargement...</span></p>
     </div>
 </section>
-
-<script>
-fetch("https://api.open-meteo.com/v1/forecast?latitude=44.94&longitude=5.72&current=temperature_2m,wind_speed_10m,weather_code")
-.then(response => response.json())
-.then(data => {
-
-    document.getElementById("temp").textContent =
-        data.current.temperature_2m + " °C";
-
-    document.getElementById("vent").textContent =
-        data.current.wind_speed_10m + " km/h";
-
-    const code = data.current.weather_code;
-
-    let condition = "Inconnue";
-
-    if(code === 0) condition = "☀️ Ensoleillé";
-    else if(code <= 3) condition = "🌤️ Peu nuageux";
-    else if(code <= 48) condition = "☁️ Nuageux";
-    else if(code <= 67) condition = "🌧️ Pluie";
-    else if(code <= 77) condition = "❄️ Neige";
-    else condition = "⛈️ Orage";
-
-    document.getElementById("condition").textContent = condition;
-})
-.catch(() => {
-    document.getElementById("temp").textContent = "Indisponible";
-    document.getElementById("vent").textContent = "Indisponible";
-    document.getElementById("condition").textContent = "Indisponible";
-});
-</script>
-
-
-
 
 <section id="contact">
     <h2>📩 Contact</h2>
@@ -144,9 +110,34 @@ fetch("https://api.open-meteo.com/v1/forecast?latitude=44.94&longitude=5.72&curr
 
     </form>
 </section>
+
 <footer>
     <p>© 2026 Passion Randonnée</p>
 </footer>
 
+<script>
+fetch("https://api.open-meteo.com/v1/forecast?latitude=44.94&longitude=5.72&current=temperature_2m,wind_speed_10m,weather_code")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("temp").textContent =
+        data.current.temperature_2m + " °C";
+
+    document.getElementById("vent").textContent =
+        data.current.wind_speed_10m + " km/h";
+
+    let condition = "Inconnue";
+    const code = data.current.weather_code;
+
+    if(code === 0) condition = "☀️ Ensoleillé";
+    else if(code <= 3) condition = "🌤️ Peu nuageux";
+    else if(code <= 48) condition = "☁️ Nuageux";
+    else if(code <= 67) condition = "🌧️ Pluie";
+    else if(code <= 77) condition = "❄️ Neige";
+    else condition = "⛈️ Orage";
+
+    document.getElementById("condition").textContent = condition;
+});
+</script>
+
 </body>
-</html>
+</html>  
