@@ -107,6 +107,37 @@ nav a{
     font-size: 1.1em;
     margin: 10px 0;
 }
+#contact {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#contact button {
+    background: #2e6b3f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background: #1f4c2c;
+}
 footer{
     background:#1b5e20;
     color:white;

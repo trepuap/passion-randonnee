@@ -114,6 +114,30 @@ fetch("https://api.open-meteo.com/v1/forecast?latitude=44.94&longitude=5.72&curr
     document.getElementById("condition").textContent = "Indisponible";
 });
 </script>
+<section id="contact">
+    <h2>📩 Contact</h2>
+
+    <form action="https://formsubmit.co/paupert.marc@orange.fr" method="POST">
+
+        <input type="text"
+               name="Nom"
+               placeholder="Votre nom"
+               required>
+
+        <input type="email"
+               name="Email"
+               placeholder="Votre e-mail"
+               required>
+
+        <textarea name="Message"
+                  placeholder="Votre message"
+                  rows="5"
+                  required></textarea>
+
+        <button type="submit">Envoyer</button>
+
+    </form>
+</section>
 <footer>
     <p>© 2026 Passion Randonnée</p>
 </footer>
